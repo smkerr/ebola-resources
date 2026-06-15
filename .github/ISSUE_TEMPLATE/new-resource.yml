@@ -1,5 +1,6 @@
 name: Suggest a Resource
 description: Suggest a resource to add to the Ebola Resources collection.
+title: "PR to add new resource"
 labels: ["new-resource"]
 body:
   - type: input
