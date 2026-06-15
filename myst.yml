@@ -1,0 +1,41 @@
+version: 1
+project:
+  title: Ebola Resources — WHO Collaboratory
+  github: bafnaprincy/ebola-resources
+  toc:
+    - file: docs/intro
+    - title: Dashboards
+      children:
+        - file: docs/dashboards/inrb-umie-dashboard
+        - file: docs/dashboards/immunization-resilience
+    - title: Epi Parameters
+      children:
+        - file: docs/epi-parameters/grepi-perg
+        - file: docs/epi-parameters/epiparameter-r-package
+        - file: docs/epi-parameters/epireview-epiparameter-vignette
+        - file: docs/epi-parameters/epireview-imperial
+        - file: docs/epi-parameters/epi-params-bvd
+    - title: Outbreak Size Estimates
+      children:
+        - file: docs/outbreak-size-estimates/mccabe-imperial
+        - file: docs/outbreak-size-estimates/abbott-bayesian-reanalysis
+    - title: Risk of Spread
+      children:
+        - file: docs/risk-of-spread/epistorm-spread-assessment
+        - file: docs/risk-of-spread/europe-importation-risk
+    - title: Mobility Data
+      children:
+        - file: docs/mobility-data/drc-population-relocation
+        - file: docs/mobility-data/flowminder-reports
+        - file: docs/mobility-data/flowminder-seminar
+    - title: Humanitarian Data
+      children:
+        - file: docs/humanitarian-data/hdx-event-page
+    - title: Therapeutics & Vaccines
+      children:
+        - file: docs/therapeutics-vaccines/who-ervebo-position
+        - file: docs/therapeutics-vaccines/who-therapeutics-prioritisation
+    - file: docs/contributing
+    - file: docs/maintainers
+site:
+  template: book-theme
