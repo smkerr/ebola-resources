@@ -2,7 +2,7 @@ name: Create resource page from issue
 
 on:
   issues:
-    types: [opened]
+    types: [opened, labeled]
 
 jobs:
   create-resource:
@@ -31,34 +31,26 @@ jobs:
             --myst-yml myst.yml)
           echo "file_path=$FILE_PATH" >> "$GITHUB_OUTPUT"
 
-      - name: Create slug for branch name
-        id: slug
-        env:
-          ISSUE_TITLE: ${{ github.event.issue.title }}
-        run: |
-          SLUG=$(echo "$ISSUE_TITLE" | sed 's/\[Resource\] //' | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9]/-/g' | sed 's/--*/-/g' | head -c 60)
-          echo "slug=$SLUG" >> "$GITHUB_OUTPUT"
-
       - name: Create branch and commit
         env:
           FILE_PATH: ${{ steps.generate.outputs.file_path }}
-          BRANCH: resource/${{ steps.slug.outputs.slug }}
+          BRANCH: resource/issue-${{ github.event.issue.number }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git push origin --delete "$BRANCH" 2>/dev/null || true
           git checkout -b "$BRANCH"
           git add "$FILE_PATH" myst.yml
-          git commit -m "Add resource: $(echo '${{ github.event.issue.title }}' | sed 's/\[Resource\] //')"
+          git commit -m "Add resource from issue #${{ github.event.issue.number }}"
           git push origin "$BRANCH"
 
       - name: Open pull request
         env:
           GH_TOKEN: ${{ secrets.RESOURCE_BOT_TOKEN }}
-          BRANCH: resource/${{ steps.slug.outputs.slug }}
+          BRANCH: resource/issue-${{ github.event.issue.number }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
-          ISSUE_TITLE: ${{ github.event.issue.title }}
         run: |
-          TITLE=$(echo "$ISSUE_TITLE" | sed 's/\[Resource\] /Add resource: /')
+          TITLE="Add resource from issue #${ISSUE_NUMBER}"
           gh pr create \
             --base main \
             --head "$BRANCH" \
