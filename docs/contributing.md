@@ -8,7 +8,7 @@ This resource list is maintained by the Ebola Community of Practice. Contributio
 
 Open a GitHub Issue using our structured form:
 
-[Suggest a Resource](https://github.com/WHO-Collaboratory/ebola-resources-jb/issues/new?template=new-resource.yml)
+[Suggest a Resource](https://github.com/WHO-Collaboratory/ebola-resources/issues/new?template=new-resource.yml)
 
 Fill in the fields — title, URL, type, section, authors, organisation, date, and a short description. A GitHub Action will create a draft page and open a Pull Request. A maintainer will review, adjust placement if needed, and merge.
 

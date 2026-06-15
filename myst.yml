@@ -1,7 +1,7 @@
 version: 1
 project:
   title: Ebola outbreak analytics community resources
-  github: WHO-Collaboratory/ebola-resources-jb
+  github: WHO-Collaboratory/ebola-resources
   toc:
     - file: docs/intro
     - file: docs/contributing

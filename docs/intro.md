@@ -4,7 +4,7 @@ A curated, community-maintained collection of resources supporting the response 
 
 ## Suggest a resource
 
-The easiest way to contribute is to [open a GitHub Issue](https://github.com/WHO-Collaboratory/ebola-resources-jb/issues/new?template=new-resource.yml). Just fill in the form — no coding needed. A maintainer will review and add it to the site.
+The easiest way to contribute is to [open a GitHub Issue](https://github.com/WHO-Collaboratory/ebola-resources/issues/new?template=new-resource.yml). Just fill in the form — no coding needed. A maintainer will review and add it to the site.
 
 See [Contributing](contributing.md) for more details.
 
