@@ -55,7 +55,7 @@ def slugify(title: str) -> str:
 
 
 def generate_page(fields: dict) -> str:
-    title = fields.get("resource_title", "Untitled")
+    title = fields.get("title_of_the_ebola_resource", "Untitled")
     rtype = fields.get("resource_type", "Resource")
     org = fields.get("organisation", "")
     authors = fields.get("authors", "")
@@ -142,7 +142,7 @@ def main():
 
     fields = parse_body(args.issue_body)
 
-    title = fields.get("resource_title", "")
+    title = fields.get("title_of_the_ebola_resource", "")
     if not title:
         print("ERROR: Could not parse resource title from issue body", file=sys.stderr)
         sys.exit(1)

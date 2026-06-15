@@ -1,12 +1,11 @@
 name: Suggest a Resource
 description: Suggest a resource to add to the Ebola Resources collection.
-title: "[Resource] "
 labels: ["new-resource"]
 body:
   - type: input
     id: title
     attributes:
-      label: Resource title
+      label: Title of the Ebola resource
       placeholder: "e.g. INRB UMIE Dashboard — DRC Ebola Bundibugyo 2026"
     validations:
       required: true
