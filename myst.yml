@@ -5,6 +5,7 @@ project:
   toc:
     - file: docs/intro.md
     - file: docs/contributing.md
+    - file: docs/formatting-guide.md
     - file: docs/maintainers.md
     - title: Resources and tools
       children:

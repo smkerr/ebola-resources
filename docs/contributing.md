@@ -40,6 +40,8 @@ Description of the resource — as much or as little as needed.
 | Link | Yes | `[Visit resource](https://...)` |
 | Description | Yes | Free-text Markdown |
 
+Beyond the header, the page body is free-text Markdown. See the [Formatting guide](formatting-guide.md) for examples of tables, code blocks, admonitions, math, and more.
+
 ## What belongs here
 
 We curate resources that are:
