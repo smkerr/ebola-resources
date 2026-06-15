@@ -163,7 +163,7 @@ def main():
 
     # Update myst.yml if section is known
     myst_path = Path(args.myst_yml)
-    file_entry = str(out_path).removesuffix(".md")
+    file_entry = str(out_path)
     if section in SECTION_MAP and myst_path.exists():
         updated = update_myst_yml(myst_path, section, file_entry)
         if not updated:
