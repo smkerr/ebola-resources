@@ -2,6 +2,10 @@ name: Build and validate site
 
 on:
   workflow_call:
+    inputs:
+      base_url:
+        type: string
+        default: /ebola-resources
 
 jobs:
   build:
@@ -45,10 +49,11 @@ jobs:
 
       - name: Build site
         env:
-          BASE_URL: /ebola-resources
+          BASE_URL: ${{ inputs.base_url }}
         run: jupyter-book build --html
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+      - name: Upload build output
+        uses: actions/upload-artifact@v4
         with:
+          name: site-build
           path: _build/html
