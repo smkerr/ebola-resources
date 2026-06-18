@@ -47,6 +47,18 @@ jobs:
           print('All TOC file references exist.')
           "
 
+      - name: Set base URL in myst.yml
+        if: inputs.base_url != '/ebola-resources'
+        run: |
+          python -c "
+          import yaml
+          with open('myst.yml') as f:
+              config = yaml.safe_load(f)
+          config['site']['options']['base_url'] = '${{ inputs.base_url }}'
+          with open('myst.yml', 'w') as f:
+              yaml.dump(config, f, default_flow_style=False, sort_keys=False)
+          "
+
       - name: Build site
         env:
           BASE_URL: ${{ inputs.base_url }}
