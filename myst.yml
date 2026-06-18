@@ -1,30 +1,36 @@
-version: 1
+version: 2
 project:
   title: Ebola outbreak analytics community resources
   github: WHO-Collaboratory/ebola-resources
   toc:
     - file: docs/intro.md
-    - file: docs/situation/updates.md
-    - file: docs/resources/tools.md
-    children:
+    - title: Situation Updates  
+      file: docs/situation/updates.md
+    - Title: Tools & Ressources 
+      file: docs/resources/tools.md
+      children:
         - file: docs/resources/# Dashboards.md
         - file: docs/resources/Epidemiologcial Parameter Estimates.md
         - file: docs/resources/Literature.md
         - file: docs/resources/Therapeutics & Vaccines.md
-    - file: docs/resources/data.md
-    children:
+    - Title: Data 
+      file: docs/resources/data.md
+      children:
         - file: 
         - file: 
         - file:
-    - title: Emerging evidence
+    - title: Emerging Evidence
       file: docs/resources/emerging-evidence.md
       children:
         - file: docs/resources/outbreak-size.md
         - file: docs/resources/risk-of-spread.md
         - file: docs/resources/therapeutics-vaccines.md
-    - file: docs/analytical-questions.md
-    - file: docs/resources/community-meetings.md
-    - file: docs/contributing.md
+    - title: Analytical Questions 
+      file: docs/analytical-questions.md
+    - title: Community Meetings
+      file: docs/resources/community-meetings.md
+    - title: Contibutions 
+      file: docs/contributing.md
     - file: docs/formatting-guide.md
     - file: docs/maintainers.md
 site:
