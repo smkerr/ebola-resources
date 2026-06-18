@@ -7,14 +7,15 @@ project:
     - file: docs/situation/updates.md
     - file: docs/resources/tools.md
     children:
-        - file: docs/resources/outbreak-size.md
-        - file: docs/resources/risk-of-spread.md
-        - file: docs/resources/therapeutics-vaccines.md
+        - file: docs/resources/# Dashboards.md
+        - file: docs/resources/Epidemiologcial Parameter Estimates.md
+        - file: docs/resources/Literature.md
+        - file: docs/resources/Therapeutics & Vaccines.md
     - file: docs/resources/data.md
     children:
-        - file: docs/resources/outbreak-size.md
-        - file: docs/resources/risk-of-spread.md
-        - file: docs/resources/therapeutics-vaccines.md
+        - file: 
+        - file: 
+        - file:
     - title: Emerging evidence
       file: docs/resources/emerging-evidence.md
       children:
