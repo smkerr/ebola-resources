@@ -4,11 +4,17 @@ project:
   github: WHO-Collaboratory/ebola-resources
   toc:
     - file: docs/intro.md
-    - file: docs/contributing.md
-    - file: docs/formatting-guide.md
-    - file: docs/maintainers.md
+    - file: docs/situation/updates.md
     - file: docs/resources/tools.md
+    children:
+        - file: docs/resources/outbreak-size.md
+        - file: docs/resources/risk-of-spread.md
+        - file: docs/resources/therapeutics-vaccines.md
     - file: docs/resources/data.md
+    children:
+        - file: docs/resources/outbreak-size.md
+        - file: docs/resources/risk-of-spread.md
+        - file: docs/resources/therapeutics-vaccines.md
     - title: Emerging evidence
       file: docs/resources/emerging-evidence.md
       children:
@@ -17,6 +23,9 @@ project:
         - file: docs/resources/therapeutics-vaccines.md
     - file: docs/analytical-questions.md
     - file: docs/resources/community-meetings.md
+    - file: docs/contributing.md
+    - file: docs/formatting-guide.md
+    - file: docs/maintainers.md
 site:
   title: Ebola outbreak analytics community resources
   template: book-theme
