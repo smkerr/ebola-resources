@@ -71,3 +71,4 @@ jobs:
         with:
           name: site-build
           path: _build/html
+          include-hidden-files: true
